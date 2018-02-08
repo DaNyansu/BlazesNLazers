@@ -1,0 +1,1499 @@
+fileFormatVersion: 2
+guid: b7ba7cb39e9b3c24a9db45aa1e416c6f
+timeCreated: 1518090424
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm IK.L
+    100002: Arm IK.L_end
+    100004: Arm IK.R
+    100006: Arm IK.R_end
+    100008: Armature
+    100010: Chest
+    100012: Cube
+    100014: Elbow Target.L
+    100016: Elbow Target.L_end
+    100018: Elbow Target.R
+    100020: Elbow Target.R_end
+    100022: Foot.L
+    100024: Foot.L_end
+    100026: Foot.R
+    100028: Foot.R_end
+    100030: Forefinger Tip.L
+    100032: Forefinger Tip.L_end
+    100034: Forefinger Tip.R
+    100036: Forefinger Tip.R_end
+    100038: Forefinger.L
+    100040: Forefinger.R
+    100042: Head
+    100044: Head_end
+    100046: //RootNode
+    100048: Knee Target.L
+    100050: Knee Target.L_end
+    100052: Knee Target.R
+    100054: Knee Target.R_end
+    100056: Leg IK.L
+    100058: Leg IK.L_end
+    100060: Leg IK.R
+    100062: Leg IK.R_end
+    100064: Lower Arm.L
+    100066: Lower Arm.R
+    100068: Lower Leg.L
+    100070: Lower Leg.R
+    100072: Master
+    100074: Middlefinger Tip.L
+    100076: Middlefinger Tip.L_end
+    100078: Middlefinger Tip.R
+    100080: Middlefinger Tip.R_end
+    100082: Middlefinger.L.002
+    100084: Middlefinger.R
+    100086: Neck
+    100088: Palm.L
+    100090: Palm.L.003
+    100092: Palm.L.003_end
+    100094: Palm.R
+    100096: Palm.R.001
+    100098: Palm.R.001_end
+    100100: Pinky Tip.L
+    100102: Pinky Tip.L_end
+    100104: Pinky Tip.R
+    100106: Pinky Tip.R_end
+    100108: Pinky.L
+    100110: Pinky.R
+    100112: Ringfinger Tip.L
+    100114: Ringfinger Tip.L_end
+    100116: Ringfinger Tip.R
+    100118: Ringfinger Tip.R_end
+    100120: Ringfinger.L
+    100122: Ringfinger.R
+    100124: Stomach
+    100126: Thumb.L
+    100128: Thumb.R
+    100130: Upper Arm.L
+    100132: Upper Arm.R
+    100134: Upper Leg.L
+    100136: Upper Leg.R
+    400000: Arm IK.L
+    400002: Arm IK.L_end
+    400004: Arm IK.R
+    400006: Arm IK.R_end
+    400008: Armature
+    400010: Chest
+    400012: Cube
+    400014: Elbow Target.L
+    400016: Elbow Target.L_end
+    400018: Elbow Target.R
+    400020: Elbow Target.R_end
+    400022: Foot.L
+    400024: Foot.L_end
+    400026: Foot.R
+    400028: Foot.R_end
+    400030: Forefinger Tip.L
+    400032: Forefinger Tip.L_end
+    400034: Forefinger Tip.R
+    400036: Forefinger Tip.R_end
+    400038: Forefinger.L
+    400040: Forefinger.R
+    400042: Head
+    400044: Head_end
+    400046: //RootNode
+    400048: Knee Target.L
+    400050: Knee Target.L_end
+    400052: Knee Target.R
+    400054: Knee Target.R_end
+    400056: Leg IK.L
+    400058: Leg IK.L_end
+    400060: Leg IK.R
+    400062: Leg IK.R_end
+    400064: Lower Arm.L
+    400066: Lower Arm.R
+    400068: Lower Leg.L
+    400070: Lower Leg.R
+    400072: Master
+    400074: Middlefinger Tip.L
+    400076: Middlefinger Tip.L_end
+    400078: Middlefinger Tip.R
+    400080: Middlefinger Tip.R_end
+    400082: Middlefinger.L.002
+    400084: Middlefinger.R
+    400086: Neck
+    400088: Palm.L
+    400090: Palm.L.003
+    400092: Palm.L.003_end
+    400094: Palm.R
+    400096: Palm.R.001
+    400098: Palm.R.001_end
+    400100: Pinky Tip.L
+    400102: Pinky Tip.L_end
+    400104: Pinky Tip.R
+    400106: Pinky Tip.R_end
+    400108: Pinky.L
+    400110: Pinky.R
+    400112: Ringfinger Tip.L
+    400114: Ringfinger Tip.L_end
+    400116: Ringfinger Tip.R
+    400118: Ringfinger Tip.R_end
+    400120: Ringfinger.L
+    400122: Ringfinger.R
+    400124: Stomach
+    400126: Thumb.L
+    400128: Thumb.R
+    400130: Upper Arm.L
+    400132: Upper Arm.R
+    400134: Upper Leg.L
+    400136: Upper Leg.R
+    4300000: Cube
+    7400000: Armature|handsdown
+    7400002: Armature|run
+    7400004: Armature|startwalk
+    7400006: Armature|stop
+    7400008: Armature|Untitled
+    7400010: Armature|Untitled.001
+    7400012: Armature|walk
+    9500000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|handsdown
+      takeName: Armature|handsdown
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm IK.L
+        weight: 1
+      - path: Armature/Arm IK.L/Arm IK.L_end
+        weight: 1
+      - path: Armature/Arm IK.R
+        weight: 1
+      - path: Armature/Arm IK.R/Arm IK.R_end
+        weight: 1
+      - path: Armature/Elbow Target.L
+        weight: 1
+      - path: Armature/Elbow Target.L/Elbow Target.L_end
+        weight: 1
+      - path: Armature/Elbow Target.R
+        weight: 1
+      - path: Armature/Elbow Target.R/Elbow Target.R_end
+        weight: 1
+      - path: Armature/Knee Target.L
+        weight: 1
+      - path: Armature/Knee Target.L/Knee Target.L_end
+        weight: 1
+      - path: Armature/Knee Target.R
+        weight: 1
+      - path: Armature/Knee Target.R/Knee Target.R_end
+        weight: 1
+      - path: Armature/Leg IK.L
+        weight: 1
+      - path: Armature/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Leg IK.R
+        weight: 1
+      - path: Armature/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Stomach
+        weight: 1
+      - path: Armature/Master/Stomach/Chest
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L/Forefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L/Middlefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L/Pinky Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L/Ringfinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003/Palm.L.003_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R/Forefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R/Middlefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R/Pinky Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R/Ringfinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001/Palm.R.001_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|run
+      takeName: Armature|run
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm IK.L
+        weight: 1
+      - path: Armature/Arm IK.L/Arm IK.L_end
+        weight: 1
+      - path: Armature/Arm IK.R
+        weight: 1
+      - path: Armature/Arm IK.R/Arm IK.R_end
+        weight: 1
+      - path: Armature/Elbow Target.L
+        weight: 1
+      - path: Armature/Elbow Target.L/Elbow Target.L_end
+        weight: 1
+      - path: Armature/Elbow Target.R
+        weight: 1
+      - path: Armature/Elbow Target.R/Elbow Target.R_end
+        weight: 1
+      - path: Armature/Knee Target.L
+        weight: 1
+      - path: Armature/Knee Target.L/Knee Target.L_end
+        weight: 1
+      - path: Armature/Knee Target.R
+        weight: 1
+      - path: Armature/Knee Target.R/Knee Target.R_end
+        weight: 1
+      - path: Armature/Leg IK.L
+        weight: 1
+      - path: Armature/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Leg IK.R
+        weight: 1
+      - path: Armature/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Stomach
+        weight: 1
+      - path: Armature/Master/Stomach/Chest
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L/Forefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L/Middlefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L/Pinky Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L/Ringfinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003/Palm.L.003_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R/Forefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R/Middlefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R/Pinky Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R/Ringfinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001/Palm.R.001_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|startwalk
+      takeName: Armature|startwalk
+      firstFrame: 0
+      lastFrame: 69
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm IK.L
+        weight: 1
+      - path: Armature/Arm IK.L/Arm IK.L_end
+        weight: 1
+      - path: Armature/Arm IK.R
+        weight: 1
+      - path: Armature/Arm IK.R/Arm IK.R_end
+        weight: 1
+      - path: Armature/Elbow Target.L
+        weight: 1
+      - path: Armature/Elbow Target.L/Elbow Target.L_end
+        weight: 1
+      - path: Armature/Elbow Target.R
+        weight: 1
+      - path: Armature/Elbow Target.R/Elbow Target.R_end
+        weight: 1
+      - path: Armature/Knee Target.L
+        weight: 1
+      - path: Armature/Knee Target.L/Knee Target.L_end
+        weight: 1
+      - path: Armature/Knee Target.R
+        weight: 1
+      - path: Armature/Knee Target.R/Knee Target.R_end
+        weight: 1
+      - path: Armature/Leg IK.L
+        weight: 1
+      - path: Armature/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Leg IK.R
+        weight: 1
+      - path: Armature/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Stomach
+        weight: 1
+      - path: Armature/Master/Stomach/Chest
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L/Forefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L/Middlefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L/Pinky Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L/Ringfinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003/Palm.L.003_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R/Forefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R/Middlefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R/Pinky Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R/Ringfinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001/Palm.R.001_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|stop
+      takeName: Armature|stop
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm IK.L
+        weight: 1
+      - path: Armature/Arm IK.L/Arm IK.L_end
+        weight: 1
+      - path: Armature/Arm IK.R
+        weight: 1
+      - path: Armature/Arm IK.R/Arm IK.R_end
+        weight: 1
+      - path: Armature/Elbow Target.L
+        weight: 1
+      - path: Armature/Elbow Target.L/Elbow Target.L_end
+        weight: 1
+      - path: Armature/Elbow Target.R
+        weight: 1
+      - path: Armature/Elbow Target.R/Elbow Target.R_end
+        weight: 1
+      - path: Armature/Knee Target.L
+        weight: 1
+      - path: Armature/Knee Target.L/Knee Target.L_end
+        weight: 1
+      - path: Armature/Knee Target.R
+        weight: 1
+      - path: Armature/Knee Target.R/Knee Target.R_end
+        weight: 1
+      - path: Armature/Leg IK.L
+        weight: 1
+      - path: Armature/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Leg IK.R
+        weight: 1
+      - path: Armature/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Stomach
+        weight: 1
+      - path: Armature/Master/Stomach/Chest
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L/Forefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L/Middlefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L/Pinky Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L/Ringfinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003/Palm.L.003_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R/Forefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R/Middlefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R/Pinky Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R/Ringfinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001/Palm.R.001_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Untitled
+      takeName: Armature|Untitled
+      firstFrame: 0
+      lastFrame: 84
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm IK.L
+        weight: 1
+      - path: Armature/Arm IK.L/Arm IK.L_end
+        weight: 1
+      - path: Armature/Arm IK.R
+        weight: 1
+      - path: Armature/Arm IK.R/Arm IK.R_end
+        weight: 1
+      - path: Armature/Elbow Target.L
+        weight: 1
+      - path: Armature/Elbow Target.L/Elbow Target.L_end
+        weight: 1
+      - path: Armature/Elbow Target.R
+        weight: 1
+      - path: Armature/Elbow Target.R/Elbow Target.R_end
+        weight: 1
+      - path: Armature/Knee Target.L
+        weight: 1
+      - path: Armature/Knee Target.L/Knee Target.L_end
+        weight: 1
+      - path: Armature/Knee Target.R
+        weight: 1
+      - path: Armature/Knee Target.R/Knee Target.R_end
+        weight: 1
+      - path: Armature/Leg IK.L
+        weight: 1
+      - path: Armature/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Leg IK.R
+        weight: 1
+      - path: Armature/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Stomach
+        weight: 1
+      - path: Armature/Master/Stomach/Chest
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L/Forefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L/Middlefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L/Pinky Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L/Ringfinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003/Palm.L.003_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R/Forefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R/Middlefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R/Pinky Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R/Ringfinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001/Palm.R.001_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Untitled.001
+      takeName: Armature|Untitled.001
+      firstFrame: 0
+      lastFrame: 84
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm IK.L
+        weight: 1
+      - path: Armature/Arm IK.L/Arm IK.L_end
+        weight: 1
+      - path: Armature/Arm IK.R
+        weight: 1
+      - path: Armature/Arm IK.R/Arm IK.R_end
+        weight: 1
+      - path: Armature/Elbow Target.L
+        weight: 1
+      - path: Armature/Elbow Target.L/Elbow Target.L_end
+        weight: 1
+      - path: Armature/Elbow Target.R
+        weight: 1
+      - path: Armature/Elbow Target.R/Elbow Target.R_end
+        weight: 1
+      - path: Armature/Knee Target.L
+        weight: 1
+      - path: Armature/Knee Target.L/Knee Target.L_end
+        weight: 1
+      - path: Armature/Knee Target.R
+        weight: 1
+      - path: Armature/Knee Target.R/Knee Target.R_end
+        weight: 1
+      - path: Armature/Leg IK.L
+        weight: 1
+      - path: Armature/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Leg IK.R
+        weight: 1
+      - path: Armature/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Stomach
+        weight: 1
+      - path: Armature/Master/Stomach/Chest
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L/Forefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L/Middlefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L/Pinky Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L/Ringfinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003/Palm.L.003_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R/Forefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R/Middlefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R/Pinky Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R/Ringfinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001/Palm.R.001_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|walk
+      takeName: Armature|walk
+      firstFrame: 0
+      lastFrame: 84
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm IK.L
+        weight: 1
+      - path: Armature/Arm IK.L/Arm IK.L_end
+        weight: 1
+      - path: Armature/Arm IK.R
+        weight: 1
+      - path: Armature/Arm IK.R/Arm IK.R_end
+        weight: 1
+      - path: Armature/Elbow Target.L
+        weight: 1
+      - path: Armature/Elbow Target.L/Elbow Target.L_end
+        weight: 1
+      - path: Armature/Elbow Target.R
+        weight: 1
+      - path: Armature/Elbow Target.R/Elbow Target.R_end
+        weight: 1
+      - path: Armature/Knee Target.L
+        weight: 1
+      - path: Armature/Knee Target.L/Knee Target.L_end
+        weight: 1
+      - path: Armature/Knee Target.R
+        weight: 1
+      - path: Armature/Knee Target.R/Knee Target.R_end
+        weight: 1
+      - path: Armature/Leg IK.L
+        weight: 1
+      - path: Armature/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Leg IK.R
+        weight: 1
+      - path: Armature/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Stomach
+        weight: 1
+      - path: Armature/Master/Stomach/Chest
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Master/Stomach/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Forefinger.L/Forefinger
+          Tip.L/Forefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Middlefinger.L.002/Middlefinger
+          Tip.L/Middlefinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Pinky.L/Pinky
+          Tip.L/Pinky Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Ringfinger.L/Ringfinger
+          Tip.L/Ringfinger Tip.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.L/Lower Arm.L/Palm.L/Thumb.L/Palm.L.003/Palm.L.003_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Forefinger.R/Forefinger
+          Tip.R/Forefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Middlefinger.R/Middlefinger
+          Tip.R/Middlefinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Pinky.R/Pinky
+          Tip.R/Pinky Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Ringfinger.R/Ringfinger
+          Tip.R/Ringfinger Tip.R_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Arm.R/Lower Arm.R/Palm.R/Thumb.R/Palm.R.001/Palm.R.001_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.L/Lower Leg.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Master/Stomach/Upper Leg.R/Lower Leg.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
