@@ -7,19 +7,25 @@ public class dogController : MonoBehaviour {
     Rigidbody DogRB;
     Renderer DogRend;
 
+    int chargeDmg;
+
     public float speed;
     public float dogHp = 20;
 
+    GameObject chargeObject;
     bool stopmoving = false;
 
 	// Use this for initialization
 	void Start () {
         DogRB = GetComponent<Rigidbody>();
         DogRend = GetComponent<Renderer>();
+        chargeObject = GameObject.Find("Lazer_Charge");
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
 
         if(!stopmoving)
         {
@@ -53,6 +59,11 @@ public class dogController : MonoBehaviour {
         if(collision.gameObject.tag == "FreeBullet")
         {
             dogHp -= 5;
+        }
+
+        if (collision.gameObject.tag == "ChargeBullet")
+        {
+            dogHp -= chargeDmg;
         }
     }
 

@@ -32,7 +32,6 @@ public class playerMovement : MonoBehaviour
     Vector3 startRelCenter;
     Vector3 endRelCenter;
 
-    public Rigidbody[] BallRB = new Rigidbody[4];
 
     public Transform[] Balls = new Transform[4];
     public Transform[] Wall = new Transform[4];
@@ -50,9 +49,11 @@ public class playerMovement : MonoBehaviour
 
     //--- SHOOTING ----
     public float bulletspeed;
-    float FreeRot;
+    public float chargeSize;
+
 
     public int wallPAmount = 2;
+    int[] chargeValue = new int[4];
 
     public GameObject lazerPrefab;
     public GameObject chargePrefab;
@@ -61,8 +62,10 @@ public class playerMovement : MonoBehaviour
 
     bool allowfire = true;
     bool[] FreeColl = new bool[4];
+    bool[] chargeReady = new bool[4];
 
     public GameObject beam;
+    public GameObject shields;
 
 
     // Use this for initialization
@@ -93,40 +96,50 @@ public class playerMovement : MonoBehaviour
         startV = Balls[1].transform.position;
         EndV = endPos[1].transform.position;
 
-        if(startV == Free[1].transform.position)
+        if (startV == Free[1].transform.position)
         {
             Debug.Log("here");
             rotateBalls();
         }
 
-        if(endPos != Free)
+        if (endPos != Free)
         {
             resetorbRot();
         }
 
-        if(startV == Lazer[1].transform.position)
+        if (startV == Lazer[1].transform.position)
         {
             LazerBeam();
         }
 
-
+        if (Balls[1].position == Shield[1].position)
+        {
+            shields.SetActive(true);
+        }
+        else
+        {
+            shields.SetActive(false);
+        }
 
         if (canmove == true)
         {
-            
-            if(!orbmoving)
+
+            if (!orbmoving)
             {
-                if (Input.GetKey(KeyCode.Mouse0) && (allowfire) && endPos == Free )
+                if (Input.GetKey(KeyCode.Mouse0) && (allowfire) && endPos == Free)
                 {
                     freeShoot();
                 }
 
-                if(Input.GetKey(KeyCode.Mouse0) && (allowfire) && endPos == Wall)
+                if (Input.GetKey(KeyCode.Mouse0) && (allowfire) && endPos == Wall)
                 {
-                    wallShoot();
+                    //Charging
+                     wallShoot();
                 }
+
+               
             }
-            
+
             Move();
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -138,7 +151,7 @@ public class playerMovement : MonoBehaviour
 
         if (!orbmoving)
         {
-            
+
 
             //FREE
             if (Input.GetKeyUp(KeyCode.Q))
@@ -196,7 +209,7 @@ public class playerMovement : MonoBehaviour
             {
                 var bullet = (GameObject)Instantiate(lazerPrefab, FreeSpawn[i].position, FreeSpawn[i].rotation);
                 bullet.GetComponent<Rigidbody>().AddRelativeForce(transform.up * bulletspeed);
-                Destroy(bullet, 3.0f);
+                Destroy(bullet, 2.0f);
             }
         }
         StartCoroutine(FreeDelay());
@@ -204,31 +217,41 @@ public class playerMovement : MonoBehaviour
 
     void wallShoot()
     {
-                for (int i = 0; i < 4; i++)
+        allowfire = false;
+        for (int i = 0; i < 4; i++)
+        {
+            if (chargeValue[i] == 0)
             {
-                if (!FreeColl[i])
-                {
-                    var bullet = (GameObject)Instantiate(chargePrefab, FreeSpawn[i].position, FreeSpawn[i].rotation);
-                    bullet.GetComponent<Rigidbody>().AddRelativeForce(transform.up * bulletspeed);
-                    Destroy(bullet, 3.0f);
-                }
-             }
-        StartCoroutine(WallDelay());
+                var bullet = (GameObject)Instantiate(chargePrefab, FreeSpawn[i].position, FreeSpawn[i].rotation, transform.parent = FreeSpawn[i]);
+                Destroy(bullet, 3.0f);
+                chargeValue[i]++;
+            }
+
+            if(chargeValue[i] == 1)
+            {
+
+            }
+
+
+        }
+
+            StartCoroutine(WallDelay());
+ 
     }
 
     void LazerBeam()
     {
         if (Input.GetKey(KeyCode.Mouse0))
-            {
+        {
             beam.SetActive(true);
             //beam.transform.Rotate(Vector3.left, 5);
-            }
+        }
 
         else
         {
             beam.SetActive(false);
         }
-        
+
     }
 
     void resetorbRot()
@@ -323,6 +346,10 @@ public class playerMovement : MonoBehaviour
     IEnumerator WallDelay()
     {
         yield return new WaitForSecondsRealtime(WallSpeed);
+        for(int i=0; i<4; i++)
+        {
+            chargeValue[i] = 0;
+        }
         allowfire = true;
     }
 }

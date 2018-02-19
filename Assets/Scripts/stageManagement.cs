@@ -25,8 +25,8 @@ public class stageManagement : MonoBehaviour {
 
         if (playerposx >= lazertriggerposx)
         {
+            Debug.Log("triggered");
             lazermove = true;
-            
         }
 	}
 }

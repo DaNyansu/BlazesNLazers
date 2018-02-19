@@ -21,14 +21,15 @@ public class lazerMovement : MonoBehaviour {
         moving = stagemanager.GetComponent<stageManagement>().lazermove;
 
     
-        if (moving == true)
+        if(moving)
         {
+            Debug.Log("we move");
             Move();
         }
 	}
 
     void Move()
     {
-        //rb3d.velocity = transform.right * speed;
+        rb3d.velocity = transform.right * speed;
     }
 }
