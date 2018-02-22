@@ -30,6 +30,6 @@ public class lazerMovement : MonoBehaviour {
 
     void Move()
     {
-        rb3d.velocity = transform.right * speed;
+       // rb3d.velocity = transform.right * speed;
     }
 }

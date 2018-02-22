@@ -18,7 +18,6 @@ public class dogController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         DogRB = GetComponent<Rigidbody>();
-        DogRend = GetComponent<Renderer>();
         chargeObject = GameObject.Find("Lazer_Charge");
 	}
 	
@@ -34,7 +33,6 @@ public class dogController : MonoBehaviour {
 
         if(dogHp <= 0)
         {
-            DogRend.material.SetColor("Dog_01", Color.black);
             stopmoving = true;
             transform.Rotate(Vector3.forward * 2, Space.World);
             DogRB.velocity = transform.right * 10 + transform.forward * 10;
