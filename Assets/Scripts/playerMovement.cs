@@ -9,6 +9,11 @@ public class playerMovement : MonoBehaviour
     //----PLAYER MOVEMENT----
 
     public float movespeed;
+    bool dashbool;
+    public float dashCd;
+    public float dashCdRem;
+
+    public Text dashText;
 
     Animator playerAnimator;
     Rigidbody rb3d;
@@ -61,7 +66,7 @@ public class playerMovement : MonoBehaviour
 
     public Transform[] FreeSpawn = new Transform[4];
 
-    bool allowfire = true;
+    public bool allowfire = true;
     bool[] FreeColl = new bool[4];
     bool[] chargeReady = new bool[4];
 
@@ -77,22 +82,30 @@ public class playerMovement : MonoBehaviour
     bool coolingbool = false;
     bool heatingbool = false;
     bool overheatbool = false;
+    bool paused = false;
 
     public Text heatText;
+    Color normalcolor;
 
 
     // Use this for initialization
     void Start()
     {
+        Debug.Log(normalcolor + "ja" + heatText.color);
         rb3d = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
         StartCoroutine("waitforstart");
         OriginRot = Balls[0].rotation;
+        dashbool = true;
         endPos = Free;
         startPos = Balls;
         orbmoving = false;
         heating = 0;
+        normalcolor = heatText.color;
         updateHeat();
+        updateDash();
+        dashCdRem = dashCd;
+        
     }
 
     // Update is called once per frame
@@ -104,10 +117,8 @@ public class playerMovement : MonoBehaviour
 
         // DEBUGGAUS
         Vector3 fwd = transform.TransformDirection(Vector3.up) * 10;
-        Debug.Log(allowfire);
+        Debug.Log(Time.timeScale);
         //DEBUGGAUS LOPPUU
-
-
 
 
         startV = Balls[1].transform.position;
@@ -118,9 +129,24 @@ public class playerMovement : MonoBehaviour
             allowfire = false;
         }
 
+        if(Time.timeScale == 0)
+        {
+            paused = true;
+        }
+
+        else
+        {
+            paused = false;
+        }
+
         if (heating > maxHeat)
         {
             heating = maxHeat;
+        }
+
+        if(heating < 0)
+        {
+            heating = 0;
         }
 
         if (heating == maxHeat)
@@ -167,7 +193,7 @@ public class playerMovement : MonoBehaviour
         if (canmove == true)
         {
 
-            if (!orbmoving)
+            if (!orbmoving && !paused)
             {
                 if (Input.GetKey(KeyCode.Mouse0) && (allowfire) && endPos == Free)
                 {
@@ -179,13 +205,11 @@ public class playerMovement : MonoBehaviour
                     //Charging
                     wallShoot();
                 }
-
-
             }
 
             Move();
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && dashbool)
             {
                 StartCoroutine("dash");
             }
@@ -273,15 +297,10 @@ public class playerMovement : MonoBehaviour
                 var bullet = (GameObject)Instantiate(chargePrefab, FreeSpawn[i].position, FreeSpawn[i].rotation, transform.parent = FreeSpawn[i]);
                 Destroy(bullet, 3.0f);
                 chargeValue[i]++;
-                if (heating < maxHeat - wallheat)
+                if (heating < maxHeat)
                 {
-                    heating += 5;
+                    heating += 2;
                 }
-            }
-
-            if (chargeValue[i] == 1)
-            {
-
             }
         }
 
@@ -292,10 +311,24 @@ public class playerMovement : MonoBehaviour
     void updateHeat()
     {
         heatText.text = "HEAT: " + heating.ToString();
-
+        heatText.color = normalcolor;
+        
         if(overheatbool)
         {
             heatText.text = "OVERHEAT";
+            heatText.color = Color.red;
+        }
+    }
+
+    void updateDash()
+    {
+        dashText.text = dashCdRem.ToString() + " :Dash";
+        dashText.color = Color.red;
+
+        if(dashbool)
+        {
+            dashText.text = "DASH READY";
+            dashText.color = normalcolor;
         }
     }
 
@@ -333,12 +366,14 @@ public class playerMovement : MonoBehaviour
 
     void rotateBalls()
     {
-
-        for (int i = 0; i < 4; i++)
+        if(Time.timeScale != 0)
         {
-            Vector3 mousePosition;
-            mousePosition = cameraboi.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cameraboi.transform.position.z));
-            Balls[i].transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePosition.y - transform.position.y), (mousePosition.x - transform.position.x)) * Mathf.Rad2Deg - 90);
+            for (int i = 0; i < 4; i++)
+            {
+                Vector3 mousePosition;
+                mousePosition = cameraboi.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cameraboi.transform.position.z));
+                Balls[i].transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePosition.y - transform.position.y), (mousePosition.x - transform.position.x)) * Mathf.Rad2Deg - 100);
+            }
         }
 
     }
@@ -366,16 +401,36 @@ public class playerMovement : MonoBehaviour
 
     private IEnumerator waitforstart()
     {
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSeconds(2);
         Move();
         canmove = true;
     }
 
     IEnumerator dash()
     {
+        dashbool = false;
+        StartCoroutine(dashCdCor());
         movespeed = 10;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.75f);
         movespeed = 2.2f;
+    }
+
+    IEnumerator dashCdCor()
+    {
+        updateDash();
+        while (dashCdRem >= 0)
+        {
+            dashCdRem--;
+            yield return new WaitForSeconds(1f);
+            updateDash();
+        }
+
+        if (dashCdRem <= 0)
+        {
+            dashbool = true;
+            dashCdRem = dashCd;
+            updateDash();
+        }
     }
 
     IEnumerator moveorbs()
@@ -391,7 +446,7 @@ public class playerMovement : MonoBehaviour
             Balls[i].transform.position = Vector3.Slerp(startRelCenter, endRelCenter, fracComplete);
             Balls[i].transform.position += centerPoint;
         }
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSeconds(0.5f);
 
         if (startV == EndV)
         {
@@ -402,13 +457,13 @@ public class playerMovement : MonoBehaviour
 
     IEnumerator FreeDelay()
     {
-        yield return new WaitForSecondsRealtime(FreeSpeed);
+        yield return new WaitForSeconds(FreeSpeed);
         allowfire = true;
     }
 
     IEnumerator WallDelay()
     {
-        yield return new WaitForSecondsRealtime(WallSpeed);
+        yield return new WaitForSeconds(WallSpeed);
         for (int i = 0; i < 4; i++)
         {
             chargeValue[i] = 0;
@@ -420,7 +475,7 @@ public class playerMovement : MonoBehaviour
     {
         coolingbool = true;
         Debug.Log("coolinsequence");
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSeconds(0.5f);
         int coolingamount = 0;
         if (startV == Free[1].transform.position)
         {
@@ -460,7 +515,7 @@ public class playerMovement : MonoBehaviour
         else if (startV == Wall[1].position)
         {
             heatamount = 5;
-            if (heating <= maxHeat)
+            if (heating <= maxHeat && !overheatbool)
             {
                 heating += heatamount;
             }
@@ -469,13 +524,13 @@ public class playerMovement : MonoBehaviour
         else if (startV == Shield[1].position)
         {
             heatamount = 5;
-            if (heating <= maxHeat - heatamount)
+            if (heating <= maxHeat - heatamount && !overheatbool)
             {
                 heating += heatamount;
             }
         }
 
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSeconds(0.5f);
         heatingbool = false;
     }
 
@@ -487,7 +542,7 @@ public class playerMovement : MonoBehaviour
         while(heating >= 50)
         {
             heating -= 5;
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
         }
         if(heating <= 50)
         {

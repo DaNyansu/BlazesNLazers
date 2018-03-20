@@ -24,12 +24,18 @@ public class lazerMovement : MonoBehaviour {
         if(moving)
         {
             Debug.Log("we move");
+            rb3d.isKinematic = false;
             Move();
+        }
+
+        else
+        {
+            rb3d.isKinematic = true;
         }
 	}
 
     void Move()
     {
-       // rb3d.velocity = transform.right * speed;
+        rb3d.velocity = transform.right * speed;
     }
 }

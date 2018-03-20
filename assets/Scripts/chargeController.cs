@@ -24,6 +24,7 @@ public class chargeController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(ballDmg);
 
         if (Input.GetKey(KeyCode.Mouse0) && rb.isKinematic)
         {
@@ -37,7 +38,7 @@ public class chargeController : MonoBehaviour
                     ballDmg = ballDmg + (Mathf.RoundToInt(timer) * Mathf.RoundToInt(dmgMultiplier));
                 }
 
-                if(ballDmg > 30)
+                if(ballDmg >= 30)
                 {
                     release();
                 }

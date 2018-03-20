@@ -34,6 +34,7 @@ public class dogController : MonoBehaviour {
         if(dogHp <= 0)
         {
             stopmoving = true;
+            DogRB.isKinematic = true;
             transform.Rotate(Vector3.forward * 2, Space.World);
             DogRB.velocity = transform.right * 10 + transform.forward * 10;
             StartCoroutine(waitfordeath());
@@ -47,12 +48,7 @@ public class dogController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            stopmoving = true;
-            DogRB.velocity = transform.right * 10 + transform.forward * 10;
-            
-        }
+
 
         if(collision.gameObject.tag == "FreeBullet")
         {
