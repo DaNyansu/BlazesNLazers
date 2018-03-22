@@ -8,8 +8,14 @@ public class playerMovement : MonoBehaviour
 
     //----PLAYER MOVEMENT----
 
-    public float movespeed;
+    
     bool dashbool;
+    public bool playerDied;
+
+    GameObject playerColl;
+    Transform endTrigger;
+
+    public float movespeed;
     public float dashCd;
     public float dashCdRem;
 
@@ -91,6 +97,8 @@ public class playerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        endTrigger = GameObject.Find("Playertrigger_End").transform;
+        playerColl = GameObject.Find("PlayerColl");
         Debug.Log(normalcolor + "ja" + heatText.color);
         rb3d = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
@@ -111,18 +119,32 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
+
         updateHeat();
         checkBallColl();
 
 
         // DEBUGGAUS
         Vector3 fwd = transform.TransformDirection(Vector3.up) * 10;
-        Debug.Log(Time.timeScale);
+        Debug.Log(movespeed);
         //DEBUGGAUS LOPPUU
 
 
         startV = Balls[1].transform.position;
         EndV = endPos[1].transform.position;
+
+        if(transform.position.x >= endTrigger.position.x)
+        {
+            movespeed = 0;
+            playerAnimator.SetTrigger("PlayerStop");
+
+        }
+
+        if(playerDied)
+        {
+            gameObject.SetActive(false);
+        }
 
         if(overheatbool)
         {
@@ -190,7 +212,7 @@ public class playerMovement : MonoBehaviour
             shields.SetActive(false);
         }
 
-        if (canmove == true)
+        if (canmove == true && !playerDied)
         {
 
             if (!orbmoving && !paused)
@@ -360,8 +382,8 @@ public class playerMovement : MonoBehaviour
 
     void Move()
     {
-        playerAnimator.SetTrigger("playerMove");
-        rb3d.velocity = transform.right * movespeed;
+            playerAnimator.SetTrigger("playerMove");
+            rb3d.velocity = transform.right * movespeed;    
     }
 
     void rotateBalls()

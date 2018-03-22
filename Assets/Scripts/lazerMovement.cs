@@ -5,6 +5,7 @@ using UnityEngine;
 public class lazerMovement : MonoBehaviour {
 
     GameObject stagemanager;
+    Transform lazerend;
     public float speed = 5;
     Rigidbody rb3d;
     bool moving;
@@ -12,6 +13,7 @@ public class lazerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb3d = GetComponent<Rigidbody>();
+        lazerend = GameObject.Find("Lazertrigger_End").transform;
         stagemanager = GameObject.Find("stageManager");
         moving = stagemanager.GetComponent<stageManagement>().lazermove;
 	}
@@ -32,10 +34,17 @@ public class lazerMovement : MonoBehaviour {
         {
             rb3d.isKinematic = true;
         }
+
+        if(transform.position.x >= lazerend.position.x)
+        {
+            //Laser has reaced the end
+            // It has to stop
+            speed = 0;
+        }
 	}
 
     void Move()
     {
-        rb3d.velocity = transform.right * speed;
+        rb3d.velocity = transform.up * -speed;
     }
 }

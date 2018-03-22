@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class resumeButton : MonoBehaviour {
-
+    public bool paused = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +18,7 @@ public class resumeButton : MonoBehaviour {
     public void resumegame()
     {
         Time.timeScale = 1;
+        paused = false;
     }
 
     public void mainmenubutton()
@@ -28,6 +29,7 @@ public class resumeButton : MonoBehaviour {
 
     public void reloadlevel()
     {
+        Time.timeScale = 1;
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }

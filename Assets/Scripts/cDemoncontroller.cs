@@ -9,9 +9,15 @@ public class cDemoncontroller : MonoBehaviour {
 
     GameObject chargeObject;
 
+    public GameObject ceilProjectile;
+    public Transform ceilSpawn;
+    public float bulletspeed;
+
+
     // Use this for initialization
     void Start () {
         chargeObject = GameObject.Find("Lazer_Charge");
+        StartCoroutine(ceilShoot());
     }
 	
 	// Update is called once per frame
@@ -22,7 +28,6 @@ public class cDemoncontroller : MonoBehaviour {
         {
             gameObject.SetActive(false);
         }
-
 
         //SPAWNAA PALLUKOITA 2 SEC INTERVALLEISSA
     }
@@ -38,5 +43,14 @@ public class cDemoncontroller : MonoBehaviour {
         {
             cDemonHp -= chargeDmg;
         }
+    }
+
+    IEnumerator ceilShoot()
+    {
+        yield return new WaitForSeconds(1f);
+        var bullet = (GameObject)Instantiate(ceilProjectile, ceilSpawn.position,ceilSpawn.rotation);
+        bullet.GetComponent<Rigidbody>().AddRelativeForce(transform.up * bulletspeed);
+        Destroy(bullet, 2.0f);
+        StartCoroutine(ceilShoot());
     }
 }

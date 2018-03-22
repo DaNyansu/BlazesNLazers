@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class playerCollisions : MonoBehaviour {
     public GameObject deathCanvas;
+    public bool playerDead = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,17 +19,29 @@ public class playerCollisions : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "FollowLazer")
+        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "FollowLaser")
         {
             Debug.Log("Osuu");
             deathCanvas.SetActive(true);
+            playerDead = true;
+            StartCoroutine(playerDeath());
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "FollowLaser")
+        {
+            Debug.Log("Osuu");
+            deathCanvas.SetActive(true);
+            playerDead = true;
             StartCoroutine(playerDeath());
         }
     }
 
     IEnumerator playerDeath()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0.5f;
         yield return new WaitForSeconds(2f);
       
     }
