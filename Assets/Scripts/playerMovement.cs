@@ -24,6 +24,9 @@ public class playerMovement : MonoBehaviour
     Animator playerAnimator;
     Rigidbody rb3d;
 
+    public AudioSource lasersound;
+    public AudioSource footsteps;
+
     //----PLAYER VARIABLES----
     public float FreeSpeed;
     public float WallSpeed;
@@ -127,7 +130,7 @@ public class playerMovement : MonoBehaviour
 
         // DEBUGGAUS
         Vector3 fwd = transform.TransformDirection(Vector3.up) * 10;
-        Debug.Log(movespeed);
+        Debug.Log("playersound");
         //DEBUGGAUS LOPPUU
 
 
@@ -214,7 +217,10 @@ public class playerMovement : MonoBehaviour
 
         if (canmove == true && !playerDied)
         {
-
+            if (!footsteps.isPlaying)
+            {
+                footsteps.Play();
+            }
             if (!orbmoving && !paused)
             {
                 if (Input.GetKey(KeyCode.Mouse0) && (allowfire) && endPos == Free)
@@ -303,6 +309,7 @@ public class playerMovement : MonoBehaviour
                 {
                     heating += 2;
                 }
+                lasersound.Play();
                 updateHeat();
             }
         }
@@ -383,7 +390,7 @@ public class playerMovement : MonoBehaviour
     void Move()
     {
             playerAnimator.SetTrigger("playerMove");
-            rb3d.velocity = transform.right * movespeed;    
+            rb3d.velocity = transform.right * movespeed;  
     }
 
     void rotateBalls()

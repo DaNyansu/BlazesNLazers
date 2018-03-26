@@ -11,10 +11,13 @@ public class stageManagement : MonoBehaviour {
     float lazertriggerposx;
 
     bool gamepaused = false;
+    bool playerdead;
+    bool deathplayed = false;
 
     public GameObject pauseCanvas;
 
     public bool lazermove = false;
+    public AudioSource deathsound;
 
 	// Use this for initialization
 	void Start () {
@@ -24,9 +27,11 @@ public class stageManagement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        playerdead = player.GetComponent<playerMovement>().playerDied;
         playerposx = player.transform.position.x;
         lazertriggerposx = lazertrigger.transform.position.x;
-        
+
+        Debug.Log("äänet" + deathsound.isPlaying);
 
         if (playerposx >= lazertriggerposx)
         {
@@ -49,6 +54,12 @@ public class stageManagement : MonoBehaviour {
         else
         {
             pauseCanvas.SetActive(false);
+        }
+
+        if(playerdead && !deathplayed)
+        {
+            deathsound.Play();
+            deathplayed = true;
         }
 	}
 }
