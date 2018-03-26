@@ -10,7 +10,6 @@ public class stageManagement : MonoBehaviour {
     GameObject lazertrigger;
     float lazertriggerposx;
 
-    bool allowfire;
     bool gamepaused = false;
 
     public GameObject pauseCanvas;
@@ -21,7 +20,6 @@ public class stageManagement : MonoBehaviour {
 	void Start () {
         lazertrigger = GameObject.Find("Lazertrigger");
         player = GameObject.Find("Player");
-        allowfire = player.GetComponent<playerMovement>().allowfire;
     }
 	
 	// Update is called once per frame
