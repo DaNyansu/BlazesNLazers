@@ -26,7 +26,7 @@ public class batController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
+        //chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
 
         batRb.AddForce(transform.up * -speed);
         tempPos.y = tempVal + amplitude * Mathf.Sin(speed * Time.time);
@@ -36,7 +36,7 @@ public class batController : MonoBehaviour {
 
         if (batDemonHp <= 0)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
 
     }

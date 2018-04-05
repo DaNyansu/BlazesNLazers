@@ -81,6 +81,7 @@ public class playerMovement : MonoBehaviour
 
     public GameObject beam;
     public GameObject shields;
+    public GameObject wall;
 
     //--- HEATING ---
     int heating;
@@ -100,7 +101,9 @@ public class playerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        endTrigger = GameObject.Find("Playertrigger_End").transform;
+        endPos = Free;
+        startPos = Balls;
+        //endTrigger = GameObject.Find("Playertrigger_End").transform;
         playerColl = GameObject.Find("PlayerColl");
         Debug.Log(normalcolor + "ja" + heatText.color);
         rb3d = GetComponent<Rigidbody>();
@@ -122,7 +125,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
+        //playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
 
         updateHeat();
         checkBallColl();
@@ -130,19 +133,19 @@ public class playerMovement : MonoBehaviour
 
         // DEBUGGAUS
         Vector3 fwd = transform.TransformDirection(Vector3.up) * 10;
-        Debug.Log("playersound");
         //DEBUGGAUS LOPPUU
 
 
         startV = Balls[1].transform.position;
         EndV = endPos[1].transform.position;
 
-        if(transform.position.x >= endTrigger.position.x)
+        /*if(transform.position.x >= endTrigger.position.x)
         {
             movespeed = 0;
             playerAnimator.SetTrigger("PlayerStop");
 
         }
+        */
 
         if(playerDied)
         {
@@ -192,7 +195,6 @@ public class playerMovement : MonoBehaviour
 
         if (startV == Free[1].transform.position)
         {
-            Debug.Log("here");
             rotateBalls();
         }
 
@@ -215,12 +217,22 @@ public class playerMovement : MonoBehaviour
             shields.SetActive(false);
         }
 
+        if (startV == Wall[1].position && !overheatbool)
+        {
+            wall.SetActive(true);
+        }
+        else
+        {
+            wall.SetActive(false);
+        }
+
         if (canmove == true && !playerDied)
         {
             if (!footsteps.isPlaying)
             {
                 footsteps.Play();
             }
+
             if (!orbmoving && !paused)
             {
                 if (Input.GetKey(KeyCode.Mouse0) && (allowfire) && endPos == Free)
@@ -401,7 +413,7 @@ public class playerMovement : MonoBehaviour
             {
                 Vector3 mousePosition;
                 mousePosition = cameraboi.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cameraboi.transform.position.z));
-                Balls[i].transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePosition.y - transform.position.y), (mousePosition.x - transform.position.x)) * Mathf.Rad2Deg - 100);
+                Balls[i].transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePosition.y - transform.position.y), (mousePosition.x - transform.position.x)) * Mathf.Rad2Deg - 90);
             }
         }
 
@@ -503,7 +515,6 @@ public class playerMovement : MonoBehaviour
     IEnumerator cooling()
     {
         coolingbool = true;
-        Debug.Log("coolinsequence");
         yield return new WaitForSeconds(0.5f);
         int coolingamount = 0;
         if (startV == Free[1].transform.position)
@@ -543,7 +554,7 @@ public class playerMovement : MonoBehaviour
 
         else if (startV == Wall[1].position)
         {
-            heatamount = 5;
+            heatamount = 2;
             if (heating <= maxHeat && !overheatbool)
             {
                 heating += heatamount;

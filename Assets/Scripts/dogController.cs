@@ -13,23 +13,29 @@ public class dogController : MonoBehaviour {
     public float dogHp = 20;
 
     GameObject chargeObject;
+   public AudioSource dogAttack;
+
     bool stopmoving = false;
 
 	// Use this for initialization
 	void Start () {
         DogRB = GetComponent<Rigidbody>();
         chargeObject = GameObject.Find("Lazer_Charge");
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
         chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
-
+        
         if(!stopmoving)
         {
             move();
         }
+
+        checkforhit();
+      
 
         if(dogHp <= 0)
         {
@@ -44,6 +50,16 @@ public class dogController : MonoBehaviour {
     void move()
     {
         DogRB.velocity = transform.up * -speed;
+    }
+
+    void checkforhit()
+    {
+        LayerMask playerMask = LayerMask.GetMask("Player");
+
+        if (Physics.Raycast(transform.position, Vector3.left, 10, playerMask) && !dogAttack.isPlaying)
+        {
+            dogAttack.Play();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
