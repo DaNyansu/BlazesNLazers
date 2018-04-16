@@ -9,13 +9,17 @@ public class platformDestroyer : MonoBehaviour {
 	void Start () {
         platformDestructionPoint = GameObject.Find("PlatformDestructionPoint");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        Debug.Log(gameObject.name + gameObject.activeSelf);
-		if(transform.position.x < platformDestructionPoint.transform.position.x && gameObject.activeSelf)
+
+    private void OnEnable()
+    {
+        platformDestructionPoint = GameObject.Find("PlatformDestructionPoint");
+    }
+
+    // Update is called once per frame
+    void LateUpdate () {
+
+        if (transform.position.x < platformDestructionPoint.transform.position.x && gameObject.activeInHierarchy)
         {
-            //Destroy(gameObject);
             gameObject.SetActive(false);
         }
 	}

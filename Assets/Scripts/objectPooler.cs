@@ -24,7 +24,20 @@ public class objectPooler : MonoBehaviour {
         }
 		
 	}
-	
+
+    private void Update()
+    {
+        Debug.Log(pooledObjects);
+
+        for (int i = 0; i < pooledObjects.Count; i++)
+        {
+            if (pooledObjects[i].activeInHierarchy)
+            {
+                pooledObjects.RemoveAt(i);
+            }
+        }
+    }
+
     public GameObject GetPooledObject()
     {
         for(int i = 0; i < pooledObjects.Count; i++)
@@ -42,5 +55,4 @@ public class objectPooler : MonoBehaviour {
 
 
     }
-
 }

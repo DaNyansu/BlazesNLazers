@@ -16,6 +16,8 @@ public class playerMovement : MonoBehaviour
     Transform endTrigger;
 
     public float movespeed;
+    public float movemultiplier;
+    public int dashCool;
     public float dashCd;
     public float dashCdRem;
 
@@ -125,7 +127,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
+        playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
 
         updateHeat();
         checkBallColl();
@@ -251,7 +253,9 @@ public class playerMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift) && dashbool)
             {
+                heating = heating - dashCool;
                 StartCoroutine("dash");
+                
             }
 
         }
@@ -451,9 +455,9 @@ public class playerMovement : MonoBehaviour
     {
         dashbool = false;
         StartCoroutine(dashCdCor());
-        movespeed = 10;
+        movespeed = movespeed * movemultiplier;
         yield return new WaitForSeconds(0.75f);
-        movespeed = 2.2f;
+        movespeed = movespeed / movemultiplier;
     }
 
     IEnumerator dashCdCor()

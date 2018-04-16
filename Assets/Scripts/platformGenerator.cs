@@ -26,19 +26,18 @@ public class platformGenerator : MonoBehaviour {
         if(transform.position.x < generationPoint.transform.position.x)
         {
             
-            //var block = (GameObject)Instantiate(interiorBlock, transform.position, interiorBlock.transform.rotation);
             transform.position = new Vector3(transform.position.x + platformWidth, transform.position.y, transform.position.z);
-
-            if (Random.Range(0f, 100f) > randomEnemyThreshold)
-            {
-                Debug.Log("Spawning enemies");
-                theEnemyGenerator.spawnEnemies(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z - 5));
-            }
 
             GameObject newBlock = theObjectPool.GetPooledObject();
 
             newBlock.transform.position = transform.position;
             newBlock.SetActive(true);
+
+            if (Random.Range(0f, 100f) > randomEnemyThreshold)
+            {
+                Debug.Log("Spawning enemies");
+                theEnemyGenerator.spawnEnemies(new Vector3(transform.position.x + Random.Range(0f,20f), transform.position.y + 1f, transform.position.z - 5));
+            }
 
         }
 	}

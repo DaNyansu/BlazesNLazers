@@ -21,11 +21,10 @@ public class playerCollisions : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "FollowLaser")
         {
-           /* Debug.Log("Osuu");
+           Debug.Log("Osuu");
             deathCanvas.SetActive(true);
             playerDead = true;
-            StartCoroutine(playerDeath());
-            */
+            StartCoroutine(playerDeath()); 
         }
     }
 
