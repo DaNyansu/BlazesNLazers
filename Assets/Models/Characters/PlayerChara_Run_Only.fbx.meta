@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: f0d891c0aa1c0e9459ac171a20f73301
+timeCreated: 1523860766
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm IK.L
+    100002: Arm IK.L_end
+    100004: Arm IK.R
+    100006: Arm IK.R_end
+    100008: Arm Pole Target.L
+    100010: Arm Pole Target.L_end
+    100012: Arm Pole Target.R
+    100014: Arm Pole Target.R_end
+    100016: Armature
+    100018: body
+    100020: Chest
+    100022: Foot.L
+    100024: Foot.R
+    100026: Fore Knuckle.L
+    100028: Fore Knuckle.R
+    100030: Fore Mid.L
+    100032: Fore Mid.R
+    100034: Fore Tip.L
+    100036: Fore Tip.L_end
+    100038: Fore Tip.R
+    100040: Fore Tip.R_end
+    100042: Head
+    100044: Head_end
+    100046: Hips
+    100048: Leg IK.L
+    100050: Leg IK.L_end
+    100052: Leg IK.R
+    100054: Leg IK.R_end
+    100056: Leg Pole Target.L
+    100058: Leg Pole Target.L_end
+    100060: Leg Pole Target.R
+    100062: Leg Pole Target.R_end
+    100064: Lower Arm.L
+    100066: Lower Arm.R
+    100068: Lower Leg.L
+    100070: Lower Leg.R
+    100072: Middle Knuckle.L
+    100074: Middle Knuckle.R
+    100076: Middle Mid.L
+    100078: Middle Mid.R
+    100080: Middle Tip.L
+    100082: Middle Tip.L_end
+    100084: Middle Tip.R
+    100086: Middle Tip.R_end
+    100088: Neck
+    100090: Palm.L
+    100092: Palm.R
+    100094: Pinky Knuckle.L
+    100096: Pinky Knuckle.R
+    100098: Pinky Mid.L
+    100100: Pinky Mid.R
+    100102: Pinky Tip.L
+    100104: Pinky Tip.L_end
+    100106: Pinky Tip.R
+    100108: Pinky Tip.R_end
+    100110: //RootNode
+    100112: Ring Knickle.L
+    100114: Ring Knickle.R
+    100116: Ring Mid.L
+    100118: Ring Mid.R
+    100120: Ring Tip.L
+    100122: Ring Tip.L_end
+    100124: Ring Tip.R
+    100126: Ring Tip.R_end
+    100128: Shoulder.L
+    100130: Shoulder.R
+    100132: Spine
+    100134: Thumb Knuckle.L
+    100136: Thumb Knuckle.R
+    100138: Thumb Mid.L
+    100140: Thumb Mid.R
+    100142: Thumb Tip.L
+    100144: Thumb Tip.L_end
+    100146: Thumb Tip.R
+    100148: Thumb Tip.R_end
+    100150: Toes.L
+    100152: Toes.L_end
+    100154: Toes.R
+    100156: Toes.R_end
+    100158: Upper Arm.L
+    100160: Upper Arm.R
+    100162: Upper Leg.L
+    100164: Upper Leg.R
+    400000: Arm IK.L
+    400002: Arm IK.L_end
+    400004: Arm IK.R
+    400006: Arm IK.R_end
+    400008: Arm Pole Target.L
+    400010: Arm Pole Target.L_end
+    400012: Arm Pole Target.R
+    400014: Arm Pole Target.R_end
+    400016: Armature
+    400018: body
+    400020: Chest
+    400022: Foot.L
+    400024: Foot.R
+    400026: Fore Knuckle.L
+    400028: Fore Knuckle.R
+    400030: Fore Mid.L
+    400032: Fore Mid.R
+    400034: Fore Tip.L
+    400036: Fore Tip.L_end
+    400038: Fore Tip.R
+    400040: Fore Tip.R_end
+    400042: Head
+    400044: Head_end
+    400046: Hips
+    400048: Leg IK.L
+    400050: Leg IK.L_end
+    400052: Leg IK.R
+    400054: Leg IK.R_end
+    400056: Leg Pole Target.L
+    400058: Leg Pole Target.L_end
+    400060: Leg Pole Target.R
+    400062: Leg Pole Target.R_end
+    400064: Lower Arm.L
+    400066: Lower Arm.R
+    400068: Lower Leg.L
+    400070: Lower Leg.R
+    400072: Middle Knuckle.L
+    400074: Middle Knuckle.R
+    400076: Middle Mid.L
+    400078: Middle Mid.R
+    400080: Middle Tip.L
+    400082: Middle Tip.L_end
+    400084: Middle Tip.R
+    400086: Middle Tip.R_end
+    400088: Neck
+    400090: Palm.L
+    400092: Palm.R
+    400094: Pinky Knuckle.L
+    400096: Pinky Knuckle.R
+    400098: Pinky Mid.L
+    400100: Pinky Mid.R
+    400102: Pinky Tip.L
+    400104: Pinky Tip.L_end
+    400106: Pinky Tip.R
+    400108: Pinky Tip.R_end
+    400110: //RootNode
+    400112: Ring Knickle.L
+    400114: Ring Knickle.R
+    400116: Ring Mid.L
+    400118: Ring Mid.R
+    400120: Ring Tip.L
+    400122: Ring Tip.L_end
+    400124: Ring Tip.R
+    400126: Ring Tip.R_end
+    400128: Shoulder.L
+    400130: Shoulder.R
+    400132: Spine
+    400134: Thumb Knuckle.L
+    400136: Thumb Knuckle.R
+    400138: Thumb Mid.L
+    400140: Thumb Mid.R
+    400142: Thumb Tip.L
+    400144: Thumb Tip.L_end
+    400146: Thumb Tip.R
+    400148: Thumb Tip.R_end
+    400150: Toes.L
+    400152: Toes.L_end
+    400154: Toes.R
+    400156: Toes.R_end
+    400158: Upper Arm.L
+    400160: Upper Arm.R
+    400162: Upper Leg.L
+    400164: Upper Leg.R
+    2100000: eye
+    2100002: Material
+    4300000: body
+    7400000: Armature|Roughrun
+    7400002: Armature|Roughrun.001
+    7400004: Armature|RunCycle
+    7400006: Armature|StartRun
+    7400008: Armature|StartRun.001
+    7400010: Armature|Stop Run
+    9500000: //RootNode
+    13700000: body
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|RunCycle
+      takeName: Armature|RunCycle
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
