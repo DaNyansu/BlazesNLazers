@@ -35,7 +35,6 @@ public class platformGenerator : MonoBehaviour {
 
             if (Random.Range(0f, 100f) > randomEnemyThreshold)
             {
-                Debug.Log("Spawning enemies");
                 theEnemyGenerator.spawnEnemies(new Vector3(transform.position.x + Random.Range(0f,20f), transform.position.y + 1f, transform.position.z - 5));
             }
 

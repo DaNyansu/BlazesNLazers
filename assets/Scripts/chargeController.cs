@@ -24,7 +24,6 @@ public class chargeController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(ballDmg);
 
         if (Input.GetKey(KeyCode.Mouse0) && rb.isKinematic)
         {

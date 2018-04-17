@@ -40,9 +40,9 @@ public class dogController : MonoBehaviour {
         if(dogHp <= 0)
         {
             stopmoving = true;
-            DogRB.isKinematic = true;
+            
             transform.Rotate(Vector3.forward * 2, Space.World);
-            DogRB.velocity = transform.right * 10 + transform.forward * 10;
+            DogRB.velocity = transform.right * 10;
             StartCoroutine(waitfordeath());
         }
 	}
@@ -56,7 +56,7 @@ public class dogController : MonoBehaviour {
     {
         LayerMask playerMask = LayerMask.GetMask("Player");
 
-        if (Physics.Raycast(transform.position, Vector3.left, 10, playerMask) && !dogAttack.isPlaying)
+        if (Physics.Raycast(transform.position, Vector3.left, 10, playerMask, QueryTriggerInteraction.Collide) && !dogAttack.isPlaying)
         {
             dogAttack.Play();
         }

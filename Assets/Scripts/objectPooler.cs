@@ -12,12 +12,14 @@ public class objectPooler : MonoBehaviour
     public int pooledAmount;
 
     List<GameObject> pooledObjects;
+    List<GameObject> waitingObjects;
 
 
     // Use this for initialization
     void Start()
     {
         pooledObjects = new List<GameObject>();
+        waitingObjects = new List<GameObject>();
 
         if (gameObject.name == "EnemyPool")
         {
@@ -48,12 +50,16 @@ public class objectPooler : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(pooledObjects);
+        if(pooledObjects.Count <= 2)
+        {
+            movePooled();
+        }
 
         for (int i = 0; i < pooledObjects.Count; i++)
         {
             if (pooledObjects[i].activeInHierarchy)
             {
+                waitingObjects.Add(pooledObjects[i]);
                 pooledObjects.RemoveAt(i);
             }
         }
@@ -61,6 +67,7 @@ public class objectPooler : MonoBehaviour
 
     public GameObject GetPooledObject()
     {
+        // TÄMÄ RANDOMOI
         for (int i = 0; i < pooledObjects.Count; i++)
         {
             if (!pooledObjects[i].activeInHierarchy)
@@ -73,7 +80,18 @@ public class objectPooler : MonoBehaviour
         obj.SetActive(false);
         pooledObjects.Add(obj);
         return obj;
+    }
 
+    private void movePooled()
+    {
+        foreach(GameObject target in waitingObjects)
+        {
+            if(!target.activeInHierarchy)
+            {
+                waitingObjects.Remove(target);
+                pooledObjects.Add(target);
+            }
 
+        }
     }
 }
