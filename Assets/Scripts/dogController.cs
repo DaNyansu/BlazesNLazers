@@ -6,6 +6,7 @@ public class dogController : MonoBehaviour {
 
     Rigidbody DogRB;
     Renderer DogRend;
+    Animator enemyAnimator;
 
     int chargeDmg;
 
@@ -21,6 +22,7 @@ public class dogController : MonoBehaviour {
 	void Start () {
         DogRB = GetComponent<Rigidbody>();
         chargeObject = GameObject.Find("Lazer_Charge");
+        enemyAnimator = GetComponent<Animator>();
         
 	}
 	
@@ -32,6 +34,7 @@ public class dogController : MonoBehaviour {
         if(!stopmoving)
         {
             move();
+            enemyAnimator.SetTrigger("StartMove");
         }
 
         checkforhit();
@@ -40,23 +43,23 @@ public class dogController : MonoBehaviour {
         if(dogHp <= 0)
         {
             stopmoving = true;
-            
-            transform.Rotate(Vector3.forward * 2, Space.World);
-            DogRB.velocity = transform.right * 10;
+            enemyAnimator.SetTrigger("StopMove");
+            transform.Rotate(Vector3.right * -2, Space.World);
+            DogRB.velocity = transform.forward * - 10;
             StartCoroutine(waitfordeath());
         }
 	}
 
     void move()
     {
-        DogRB.velocity = transform.up * -speed;
+        DogRB.velocity = transform.forward * speed;
     }
 
     void checkforhit()
     {
         LayerMask playerMask = LayerMask.GetMask("Player");
 
-        if (Physics.Raycast(transform.position, Vector3.left, 10, playerMask, QueryTriggerInteraction.Collide) && !dogAttack.isPlaying)
+        if (Physics.Raycast(transform.position, Vector3.left, 10, playerMask, QueryTriggerInteraction.Collide) && !dogAttack.isPlaying && dogHp > 0)
         {
             dogAttack.Play();
         }

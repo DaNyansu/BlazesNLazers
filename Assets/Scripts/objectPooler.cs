@@ -25,14 +25,14 @@ public class objectPooler : MonoBehaviour
         {
             for (int i = 0; i < pooledAmount; i++)
             {
-                for(int p = 0; p < pooledArrayObject.Length; p++)
+                for (int p = 0; p < pooledArrayObject.Length; p++)
                 {
                     GameObject obj = (GameObject)Instantiate(pooledArrayObject[p]);
                     obj.name = pooledArrayObject[p].name + i;
                     obj.SetActive(false);
                     pooledObjects.Add(obj);
                 }
-                
+
             }
         }
 
@@ -50,7 +50,7 @@ public class objectPooler : MonoBehaviour
 
     private void Update()
     {
-        if(pooledObjects.Count <= 2)
+        if (pooledObjects.Count <= 2)
         {
             movePooled();
         }
@@ -67,7 +67,6 @@ public class objectPooler : MonoBehaviour
 
     public GameObject GetPooledObject()
     {
-        // TÄMÄ RANDOMOI
         for (int i = 0; i < pooledObjects.Count; i++)
         {
             if (!pooledObjects[i].activeInHierarchy)
@@ -82,11 +81,27 @@ public class objectPooler : MonoBehaviour
         return obj;
     }
 
+    public GameObject GetPooledEnemy()
+    {
+        // TÄMÄ RANDOMOI
+        int i = Random.Range(0, pooledObjects.Count);
+        if (!pooledObjects[i].activeInHierarchy)
+        {
+            return pooledObjects[i];
+        }
+
+
+        GameObject obj = (GameObject)Instantiate(pooledObject);
+        obj.SetActive(false);
+        pooledObjects.Add(obj);
+        return obj;
+    }
+
     private void movePooled()
     {
-        foreach(GameObject target in waitingObjects)
+        foreach (GameObject target in waitingObjects)
         {
-            if(!target.activeInHierarchy)
+            if (!target.activeInHierarchy)
             {
                 waitingObjects.Remove(target);
                 pooledObjects.Add(target);
