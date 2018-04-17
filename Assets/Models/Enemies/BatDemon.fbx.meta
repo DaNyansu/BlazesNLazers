@@ -1,16 +1,134 @@
 fileFormatVersion: 2
-guid: 4812c2a282dd4b545a85cc301edaa553
-timeCreated: 1520339289
+guid: 8674b60d0d31b9f46a9bcc1f1827a7e2
+timeCreated: 1523959567
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Material.001
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Sphere.001
+    100000: Armature.001
+    100002: BatBody.001
+    100004: //RootNode
+    100006: Bone
+    100008: Bone.001
+    100010: Bone.001_end
+    100012: Bone.002
+    100014: Bone.002_end
+    100016: Bone.003
+    100018: Bone.003_end
+    100020: Bone.004
+    100022: Bone.004_end
+    100024: Bone.005
+    100026: Bone.005_end
+    100028: Bone.006
+    100030: Bone.006_end
+    100032: Bone.007
+    100034: Bone.007_end
+    100036: Bone.008
+    100038: Bone.008_end
+    100040: Bone.009
+    100042: Bone.009_end
+    100044: Bone.010
+    100046: Bone.010_end
+    100048: Bone.011
+    100050: Bone.011_end
+    100052: Bone.012
+    100054: Bone.012_end
+    100056: Bone.013
+    100058: Bone.013_end
+    100060: Bone_end
+    100062: Chest
+    100064: Head
+    100066: Hips
+    100068: Lower Leg.L
+    100070: Lower Leg.L_end
+    100072: Lower Leg.R
+    100074: Lower Leg.R_end
+    100076: Neck
+    100078: Spine
+    100080: Tail Root
+    100082: Tail Tip
+    100084: Tail Tip_end
+    100086: Upper Leg.L
+    100088: Upper Leg.R
+    100090: Wing Bone.L
+    100092: Wing Bone.L_end
+    100094: Wing Bone.R
+    100096: Wing Bone.R_end
+    100098: Wing Mid.L
+    100100: Wing Mid.R
+    100102: Wing Outer.L
+    100104: Wing Outer.L_end
+    100106: Wing Outer.R
+    100108: Wing Outer.R_end
+    100110: Wing Shoulder.L
+    100112: Wing Shoulder.R
+    400000: Armature.001
+    400002: BatBody.001
+    400004: //RootNode
+    400006: Bone
+    400008: Bone.001
+    400010: Bone.001_end
+    400012: Bone.002
+    400014: Bone.002_end
+    400016: Bone.003
+    400018: Bone.003_end
+    400020: Bone.004
+    400022: Bone.004_end
+    400024: Bone.005
+    400026: Bone.005_end
+    400028: Bone.006
+    400030: Bone.006_end
+    400032: Bone.007
+    400034: Bone.007_end
+    400036: Bone.008
+    400038: Bone.008_end
+    400040: Bone.009
+    400042: Bone.009_end
+    400044: Bone.010
+    400046: Bone.010_end
+    400048: Bone.011
+    400050: Bone.011_end
+    400052: Bone.012
+    400054: Bone.012_end
+    400056: Bone.013
+    400058: Bone.013_end
+    400060: Bone_end
+    400062: Chest
+    400064: Head
+    400066: Hips
+    400068: Lower Leg.L
+    400070: Lower Leg.L_end
+    400072: Lower Leg.R
+    400074: Lower Leg.R_end
+    400076: Neck
+    400078: Spine
+    400080: Tail Root
+    400082: Tail Tip
+    400084: Tail Tip_end
+    400086: Upper Leg.L
+    400088: Upper Leg.R
+    400090: Wing Bone.L
+    400092: Wing Bone.L_end
+    400094: Wing Bone.R
+    400096: Wing Bone.R_end
+    400098: Wing Mid.L
+    400100: Wing Mid.R
+    400102: Wing Outer.L
+    400104: Wing Outer.L_end
+    400106: Wing Outer.R
+    400108: Wing Outer.R_end
+    400110: Wing Shoulder.L
+    400112: Wing Shoulder.R
+    2100000: Material.000
+    4300000: BatBody.001
+    7400000: Armature.001|Bat_Fly
+    7400002: Armature.001|Bat_Still
+    7400004: Armature.001|empty.002
+    7400006: Armature.001|empty
+    7400008: Armature.001|empty.001
+    7400010: Armature.001|empty.003
+    9500000: //RootNode
+    13700000: BatBody.001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -37,7 +155,63 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature.001|Bat_Fly
+      takeName: Armature.001|Bat_Fly
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.001|Bat_Still
+      takeName: Armature.001|Bat_Still
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -85,7 +259,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
