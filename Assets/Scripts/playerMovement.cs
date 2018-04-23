@@ -29,6 +29,7 @@ public class playerMovement : MonoBehaviour
 
     public AudioSource lasersound;
     public AudioSource footsteps;
+    public AudioSource deathsound;
 
     //----PLAYER VARIABLES----
     public float FreeSpeed;
@@ -129,7 +130,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
+        playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
 
         updateHeat();
         checkBallColl();

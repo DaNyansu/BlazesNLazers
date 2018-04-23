@@ -29,7 +29,7 @@ public class stageManagement : MonoBehaviour {
 	void Update () {
         playerdead = player.GetComponent<playerMovement>().playerDied;
         playerposx = player.transform.position.x;
-        lazertriggerposx = lazertrigger.transform.position.x;
+        //lazertriggerposx = lazertrigger.transform.position.x;
 
         Debug.Log("äänet" + deathsound.isPlaying);
 

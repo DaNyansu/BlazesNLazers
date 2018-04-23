@@ -9,7 +9,8 @@ public class batController : MonoBehaviour {
     int chargeDmg;
 
     public float amplitude;          
-    public float speed;                  
+    public float floatspeed;
+    public float movespeed;
     public float tempVal;
     Vector3 tempPos;
 
@@ -30,10 +31,10 @@ public class batController : MonoBehaviour {
 	void Update () {
         chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
 
-        batRb.AddForce(transform.up * -speed);
-        tempPos.y = tempVal + amplitude * Mathf.Sin(speed * Time.time);
-        transform.position = tempPos;
-        
+        batRb.velocity =transform.up * -movespeed;
+        tempPos.y = tempVal + amplitude * Mathf.Sin(floatspeed * Time.time);
+        transform.position = new Vector3(transform.position.x, tempPos.y, transform.position.z);
+       
 
 
         if (batDemonHp <= 0)

@@ -20,7 +20,7 @@ public class playerCollisions : MonoBehaviour
 
     }
 
-   /* void OnCollisionEnter(Collision collision)
+     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "FollowLaser")
         {
@@ -41,7 +41,7 @@ public class playerCollisions : MonoBehaviour
             StartCoroutine(playerDeath());
         }
     }
-    */
+
     IEnumerator playerDeath()
     {
         Time.timeScale = 0.5f;
