@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 7f239dd3fbd3a26419120f4e98ce8cd3
+timeCreated: 1523949564
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Back Foot CTRL.L
+    100004: Back Foot CTRL.R
+    100006: Back IK.L
+    100008: Back IK.R
+    100010: Back Lower Leg.L
+    100012: Back Lower Leg.R
+    100014: Back Mid IK.L
+    100016: Back Mid IK.R
+    100018: Back Mid Leg.L
+    100020: Back Mid Leg.R
+    100022: Back Mid Pole.L
+    100024: Back Mid Pole.L_end
+    100026: Back Mid Pole.R
+    100028: Back Mid Pole.R_end
+    100030: Back Pole Target.L
+    100032: Back Pole Target.L_end
+    100034: Back Pole Target.R
+    100036: Back Pole Target.R_end
+    100038: Back Thigh.L
+    100040: Back Thigh.R
+    100042: Back Toes.L
+    100044: Back Toes.L_end
+    100046: Back Toes.R
+    100048: Back Toes.R_end
+    100050: Back Wrist.L
+    100052: Back Wrist.R
+    100054: Chest
+    100056: Cube
+    100058: //RootNode
+    100060: Front IK.L
+    100062: Front IK.R
+    100064: Front Lower Leg.L
+    100066: Front Lower Leg.R
+    100068: Front Mid IK.L
+    100070: Front Mid IK.R
+    100072: Front Mid Leg.L
+    100074: Front Mid Leg.R
+    100076: Front Mid Pole.L
+    100078: Front Mid Pole.L_end
+    100080: Front Mid Pole.R
+    100082: Front Mid Pole.R_end
+    100084: Front Pole Target.L
+    100086: Front Pole Target.L_end
+    100088: Front Pole Target.R
+    100090: Front Pole Target.R_end
+    100092: Front Toes.L
+    100094: Front Toes.L_end
+    100096: Front Toes.R
+    100098: Front Toes.R_end
+    100100: Front Wrist.L
+    100102: Front Wrist.R
+    100104: Head
+    100106: Head_end
+    100108: Hips
+    100110: Neck
+    100112: Shoulder.L
+    100114: Shoulder.R
+    100116: Spine
+    100118: Tail Close Root
+    100120: Tail Close Tip
+    100122: Tail Root
+    100124: Tail Tip
+    100126: Tail Tip_end
+    400000: Armature
+    400002: Back Foot CTRL.L
+    400004: Back Foot CTRL.R
+    400006: Back IK.L
+    400008: Back IK.R
+    400010: Back Lower Leg.L
+    400012: Back Lower Leg.R
+    400014: Back Mid IK.L
+    400016: Back Mid IK.R
+    400018: Back Mid Leg.L
+    400020: Back Mid Leg.R
+    400022: Back Mid Pole.L
+    400024: Back Mid Pole.L_end
+    400026: Back Mid Pole.R
+    400028: Back Mid Pole.R_end
+    400030: Back Pole Target.L
+    400032: Back Pole Target.L_end
+    400034: Back Pole Target.R
+    400036: Back Pole Target.R_end
+    400038: Back Thigh.L
+    400040: Back Thigh.R
+    400042: Back Toes.L
+    400044: Back Toes.L_end
+    400046: Back Toes.R
+    400048: Back Toes.R_end
+    400050: Back Wrist.L
+    400052: Back Wrist.R
+    400054: Chest
+    400056: Cube
+    400058: //RootNode
+    400060: Front IK.L
+    400062: Front IK.R
+    400064: Front Lower Leg.L
+    400066: Front Lower Leg.R
+    400068: Front Mid IK.L
+    400070: Front Mid IK.R
+    400072: Front Mid Leg.L
+    400074: Front Mid Leg.R
+    400076: Front Mid Pole.L
+    400078: Front Mid Pole.L_end
+    400080: Front Mid Pole.R
+    400082: Front Mid Pole.R_end
+    400084: Front Pole Target.L
+    400086: Front Pole Target.L_end
+    400088: Front Pole Target.R
+    400090: Front Pole Target.R_end
+    400092: Front Toes.L
+    400094: Front Toes.L_end
+    400096: Front Toes.R
+    400098: Front Toes.R_end
+    400100: Front Wrist.L
+    400102: Front Wrist.R
+    400104: Head
+    400106: Head_end
+    400108: Hips
+    400110: Neck
+    400112: Shoulder.L
+    400114: Shoulder.R
+    400116: Spine
+    400118: Tail Close Root
+    400120: Tail Close Tip
+    400122: Tail Root
+    400124: Tail Tip
+    400126: Tail Tip_end
+    2100000: Material
+    4300000: Cube
+    7400000: Armature|ArmatureAction
+    7400002: Armature|Run
+    7400004: Armature|Stand Still
+    9500000: //RootNode
+    13700000: Cube
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Run
+      takeName: Armature|Run
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Stand Still
+      takeName: Armature|Stand Still
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

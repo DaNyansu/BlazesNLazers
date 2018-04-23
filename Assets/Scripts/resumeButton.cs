@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class resumeButton : MonoBehaviour {
     public bool paused = true;
-	// Use this for initialization
-	void Start () {
+
+    bool loadLevel = false;
+
+    // Use this for initialization
+    void Start () {
     }
 	
 	// Update is called once per frame
@@ -26,10 +29,25 @@ public class resumeButton : MonoBehaviour {
         SceneManager.LoadScene("Mainmenu",LoadSceneMode.Single);
     }
 
-    public void reloadlevel()
+    public void reloadCurrent()
+    {
+        if (!loadLevel)
+        {
+            loadLevel = true;
+            StartCoroutine(reloadlevel());
+        }
+    }
+
+    IEnumerator reloadlevel()
     {
         Time.timeScale = 1;
         int scene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+
+        AsyncOperation async = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
+
+        while (!async.isDone)
+        {
+            yield return null;
+        }
     }
 }

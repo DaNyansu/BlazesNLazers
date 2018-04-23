@@ -13,9 +13,12 @@ public class playerMovement : MonoBehaviour
     public bool playerDied;
 
     GameObject playerColl;
+
     Transform endTrigger;
 
     public float movespeed;
+    public float movemultiplier;
+    public int dashCool;
     public float dashCd;
     public float dashCdRem;
 
@@ -26,6 +29,7 @@ public class playerMovement : MonoBehaviour
 
     public AudioSource lasersound;
     public AudioSource footsteps;
+    public AudioSource deathsound;
 
     //----PLAYER VARIABLES----
     public float FreeSpeed;
@@ -101,10 +105,11 @@ public class playerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         endPos = Free;
         startPos = Balls;
         //endTrigger = GameObject.Find("Playertrigger_End").transform;
-        playerColl = GameObject.Find("PlayerColl");
+        playerColl = GameObject.Find("playerColl");
         Debug.Log(normalcolor + "ja" + heatText.color);
         rb3d = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
@@ -125,7 +130,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
+        playerDied = playerColl.GetComponent<playerCollisions>().playerDead;
 
         updateHeat();
         checkBallColl();
@@ -251,7 +256,9 @@ public class playerMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift) && dashbool)
             {
+                heating = heating - dashCool;
                 StartCoroutine("dash");
+                
             }
 
         }
@@ -401,8 +408,8 @@ public class playerMovement : MonoBehaviour
 
     void Move()
     {
-            playerAnimator.SetTrigger("playerMove");
-            rb3d.velocity = transform.right * movespeed;  
+        playerAnimator.SetTrigger("playerMove");
+        rb3d.velocity = transform.right * movespeed;  
     }
 
     void rotateBalls()
@@ -445,15 +452,16 @@ public class playerMovement : MonoBehaviour
         yield return new WaitForSeconds(2);
         Move();
         canmove = true;
+        StopCoroutine(waitforstart());
     }
 
     IEnumerator dash()
     {
         dashbool = false;
         StartCoroutine(dashCdCor());
-        movespeed = 10;
+        movespeed = movespeed * movemultiplier;
         yield return new WaitForSeconds(0.75f);
-        movespeed = 2.2f;
+        movespeed = movespeed / movemultiplier;
     }
 
     IEnumerator dashCdCor()

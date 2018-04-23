@@ -10,9 +10,8 @@ public class enemyGenerator : MonoBehaviour {
     
     public void spawnEnemies(Vector3 startPosition)
     {
-        Debug.Log("Generating enemies");
-        GameObject enemy1 = enemyPool.GetPooledObject();
-        enemy1.transform.position = startPosition;
+        GameObject enemy1 = enemyPool.GetPooledEnemy();
+        enemy1.transform.position = new Vector3(startPosition.x,enemy1.transform.position.y,enemy1.transform.position.z);
         enemy1.SetActive(true);
     }
 }

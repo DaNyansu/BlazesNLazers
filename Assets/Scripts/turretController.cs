@@ -24,6 +24,9 @@ public class turretController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
+
+        Debug.DrawRay(transform.position, Vector3.left * 25, Color.green);
+
         checkforhit();
 
         if (turretHp <= 0)
@@ -49,8 +52,11 @@ public class turretController : MonoBehaviour {
     {
         LayerMask playerMask = LayerMask.GetMask("Player");
 
-        if (Physics.Raycast(transform.position, Vector3.left, 100, playerMask) && !shootingbool)
+
+
+        if (Physics.Raycast(transform.position, Vector3.left, 25, playerMask, QueryTriggerInteraction.Collide) && !shootingbool)
         {
+            Debug.Log("FOUND PLAYER");
             StartCoroutine(ceilShoot());
         }
     }
