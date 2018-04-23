@@ -18,10 +18,12 @@ public class batController : MonoBehaviour {
 
     GameObject chargeObject;
 
+    stageManagement manager;
     void OnEnable ()
     {
         batDemonHp = maxDemonHp;
         chargeObject = GameObject.Find("Lazer_Charge");
+        manager = FindObjectOfType<stageManagement>();
         batRb = GetComponent<Rigidbody>();
         tempVal = transform.position.y;
         tempPos = transform.position;
@@ -40,6 +42,7 @@ public class batController : MonoBehaviour {
         if (batDemonHp <= 0)
         {
             gameObject.SetActive(false);
+            manager.addscore(50);
         }
 
     }

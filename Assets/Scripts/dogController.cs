@@ -13,8 +13,10 @@ public class dogController : MonoBehaviour {
     public float speed;
     public float dogHp = 20;
 
-    GameObject chargeObject;
+   GameObject chargeObject;
    public AudioSource dogAttack;
+
+    stageManagement manager;
 
     bool stopmoving = false;
 
@@ -23,11 +25,13 @@ public class dogController : MonoBehaviour {
         DogRB = GetComponent<Rigidbody>();
         chargeObject = GameObject.Find("Lazer_Charge");
         enemyAnimator = GetComponent<Animator>();
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        manager = FindObjectOfType<stageManagement>();
+
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
         
@@ -91,6 +95,7 @@ public class dogController : MonoBehaviour {
     IEnumerator waitfordeath()
     {
         yield return new WaitForSeconds(0.5f);
+        manager.addscore(50);
         gameObject.SetActive(false);
     }
 

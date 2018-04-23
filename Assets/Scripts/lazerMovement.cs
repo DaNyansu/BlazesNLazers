@@ -13,8 +13,7 @@ public class lazerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb3d = GetComponent<Rigidbody>();
-        lazerend = GameObject.Find("Lazertrigger_End").transform;
-        stagemanager = GameObject.Find("stageManager");
+        stagemanager = GameObject.Find("LevelManager");
         moving = stagemanager.GetComponent<stageManagement>().lazermove;
 	}
 	
@@ -35,12 +34,13 @@ public class lazerMovement : MonoBehaviour {
             rb3d.isKinematic = true;
         }
 
-        if(transform.position.x >= lazerend.position.x)
+       /* if(transform.position.x >= lazerend.position.x)
         {
-            //Laser has reaced the end
+            //Laser has reached the end
             // It has to stop
             speed = 0;
         }
+        */
 	}
 
     void Move()

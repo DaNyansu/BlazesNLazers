@@ -10,6 +10,9 @@ public class stageManagement : MonoBehaviour {
     GameObject lazertrigger;
     float lazertriggerposx;
 
+    int score;
+    public Text scoreText;
+
     bool gamepaused = false;
     bool playerdead;
     bool deathplayed = false;
@@ -29,9 +32,9 @@ public class stageManagement : MonoBehaviour {
 	void Update () {
         playerdead = player.GetComponent<playerMovement>().playerDied;
         playerposx = player.transform.position.x;
-        //lazertriggerposx = lazertrigger.transform.position.x;
+        lazertriggerposx = lazertrigger.transform.position.x;
 
-        Debug.Log("äänet" + deathsound.isPlaying);
+        Debug.Log(score);
 
         if (playerposx >= lazertriggerposx)
         {
@@ -62,4 +65,15 @@ public class stageManagement : MonoBehaviour {
             deathplayed = true;
         }
 	}
+
+    public void addscore(int scorevalue)
+    {
+        score = score + scorevalue;
+        updateScore();
+    }
+
+    void updateScore()
+    {
+        scoreText.text = score.ToString();
+    }
 }

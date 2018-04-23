@@ -7,6 +7,9 @@ public class cDemoncontroller : MonoBehaviour {
     public int cDemonHp;
     int chargeDmg;
 
+    stageManagement manager;
+
+
     GameObject chargeObject;
 
     public GameObject ceilProjectile;
@@ -17,6 +20,8 @@ public class cDemoncontroller : MonoBehaviour {
     // Use this for initialization
     void Start () {
         chargeObject = GameObject.Find("Lazer_Charge");
+        manager = FindObjectOfType<stageManagement>();
+
         StartCoroutine(ceilShoot());
     }
 	
@@ -26,6 +31,7 @@ public class cDemoncontroller : MonoBehaviour {
 
         if(cDemonHp <= 0)
         {
+            manager.addscore(50);
             gameObject.SetActive(false);
         }
 

@@ -8,11 +8,14 @@ public class EnemyScript : MonoBehaviour {
     int enemyHp;
 
     GameObject chargeObject;
+    stageManagement manager;
+
     int chargeDmg;
 
     // Use this for initialization
     void OnEnable () {
         chargeObject = GameObject.Find("Lazer_Charge");
+        manager = FindObjectOfType<stageManagement>();
         enemyHp = maxEnemyHp;
     }
 
@@ -22,7 +25,9 @@ public class EnemyScript : MonoBehaviour {
 
         if (enemyHp <= 0)
         {
+            manager.addscore(50);
             gameObject.SetActive(false);
+            
         }
     }
 
