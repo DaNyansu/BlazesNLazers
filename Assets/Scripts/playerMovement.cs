@@ -138,6 +138,7 @@ public class playerMovement : MonoBehaviour
 
         // DEBUGGAUS
         Vector3 fwd = transform.TransformDirection(Vector3.up) * 10;
+        Debug.Log(movespeed);
         //DEBUGGAUS LOPPUU
 
 
@@ -285,7 +286,7 @@ public class playerMovement : MonoBehaviour
                 endPos = Wall;
                 startTime = Time.time;
             }
-
+/*
             //SHIELD
             if (Input.GetKeyUp(KeyCode.E))
             {
@@ -304,6 +305,7 @@ public class playerMovement : MonoBehaviour
                 endPos = Lazer;
                 startTime = Time.time;
             }
+            */
         }
 
         if (startV != EndV && allowfire)
@@ -502,6 +504,15 @@ public class playerMovement : MonoBehaviour
             orbmoving = false;
         }
         yield return null;
+    }
+
+    public IEnumerator playerSlow(float slowamount, float slowduration)
+    {
+        movespeed = movespeed * slowamount;
+        yield return new WaitForSeconds(slowduration);
+        movespeed = movespeed / slowamount;
+        yield return null;
+        StopCoroutine(playerSlow(0,0));
     }
 
     IEnumerator FreeDelay()

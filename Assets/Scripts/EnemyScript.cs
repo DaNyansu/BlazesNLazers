@@ -9,6 +9,7 @@ public class EnemyScript : MonoBehaviour {
 
     GameObject chargeObject;
     stageManagement manager;
+    playerMovement player;
 
     int chargeDmg;
 
@@ -16,6 +17,7 @@ public class EnemyScript : MonoBehaviour {
     void OnEnable () {
         chargeObject = GameObject.Find("Lazer_Charge");
         manager = FindObjectOfType<stageManagement>();
+        player = FindObjectOfType<playerMovement>();
         enemyHp = maxEnemyHp;
     }
 
@@ -41,6 +43,12 @@ public class EnemyScript : MonoBehaviour {
         if (coll.gameObject.tag == "ChargeBullet")
         {
             enemyHp -= chargeDmg;
+        }
+
+        if(coll.gameObject.tag == "Player")
+        {
+            player.StartCoroutine(player.playerSlow(0.5f, 2f));
+            gameObject.SetActive(false);
         }
     }
 }

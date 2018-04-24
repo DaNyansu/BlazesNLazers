@@ -52,6 +52,8 @@ public class stageManagement : MonoBehaviour {
         if(Time.timeScale == 0 && gamepaused)
         {
             pauseCanvas.SetActive(true);
+            PlayerPrefs.SetInt("CurScore", score);
+            PlayerPrefs.Save();
         }
 
         else

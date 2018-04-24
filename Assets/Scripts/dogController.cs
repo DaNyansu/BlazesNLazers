@@ -11,7 +11,8 @@ public class dogController : MonoBehaviour {
     int chargeDmg;
 
     public float speed;
-    public float dogHp = 20;
+    public float maxHp;
+    float dogHp;
 
    GameObject chargeObject;
    public AudioSource dogAttack;
@@ -21,7 +22,8 @@ public class dogController : MonoBehaviour {
     bool stopmoving = false;
 
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
+        dogHp = maxHp;
         DogRB = GetComponent<Rigidbody>();
         chargeObject = GameObject.Find("Lazer_Charge");
         enemyAnimator = GetComponent<Animator>();
@@ -33,6 +35,7 @@ public class dogController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Vector3.left * 10, Color.green);
         chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
         
         if(!stopmoving)
@@ -48,8 +51,6 @@ public class dogController : MonoBehaviour {
         {
             stopmoving = true;
             enemyAnimator.SetTrigger("StopMove");
-            transform.Rotate(Vector3.right * -2, Space.World);
-            DogRB.velocity = transform.forward * - 10;
             StartCoroutine(waitfordeath());
         }
 	}
@@ -63,8 +64,9 @@ public class dogController : MonoBehaviour {
     {
         LayerMask playerMask = LayerMask.GetMask("Player");
 
-        if (Physics.Raycast(transform.position, Vector3.left, 10, playerMask, QueryTriggerInteraction.Collide) && !dogAttack.isPlaying && dogHp > 0)
+        if (Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 2f,transform.position.z), Vector3.left, 15, playerMask, QueryTriggerInteraction.Collide) && !dogAttack.isPlaying && dogHp > 0)
         {
+            Debug.Log("FOUNDYOU");
             dogAttack.Play();
         }
     }
