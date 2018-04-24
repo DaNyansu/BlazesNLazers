@@ -509,8 +509,10 @@ public class playerMovement : MonoBehaviour
     public IEnumerator playerSlow(float slowamount, float slowduration)
     {
         movespeed = movespeed * slowamount;
+        playerAnimator.speed = playerAnimator.speed * slowamount;
         yield return new WaitForSeconds(slowduration);
         movespeed = movespeed / slowamount;
+        playerAnimator.speed = playerAnimator.speed / slowamount;
         yield return null;
         StopCoroutine(playerSlow(0,0));
     }

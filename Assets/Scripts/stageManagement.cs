@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class stageManagement : MonoBehaviour {
 
@@ -24,6 +25,7 @@ public class stageManagement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        score = 0;
         lazertrigger = GameObject.Find("Lazertrigger");
         player = GameObject.Find("Player");
     }
@@ -52,8 +54,6 @@ public class stageManagement : MonoBehaviour {
         if(Time.timeScale == 0 && gamepaused)
         {
             pauseCanvas.SetActive(true);
-            PlayerPrefs.SetInt("CurScore", score);
-            PlayerPrefs.Save();
         }
 
         else
@@ -65,6 +65,9 @@ public class stageManagement : MonoBehaviour {
         {
             deathsound.Play();
             deathplayed = true;
+            PlayerPrefs.SetInt("CurScore", score);
+            PlayerPrefs.Save();
+            StartCoroutine(returnLab());
         }
 	}
 
@@ -77,5 +80,17 @@ public class stageManagement : MonoBehaviour {
     void updateScore()
     {
         scoreText.text = score.ToString();
+    }
+
+    IEnumerator returnLab()
+    {
+        yield return new WaitForSeconds(2f);
+
+        AsyncOperation async = SceneManager.LoadSceneAsync("labLevel", LoadSceneMode.Single);
+        Time.timeScale = 1;
+        while (!async.isDone)
+        {
+            yield return null;
+        }
     }
 }
