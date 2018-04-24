@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class turretController : MonoBehaviour {
 
-    public int turretHp;
+    int turretHp;
+    public int maxHp;
     int chargeDmg;
 
     GameObject chargeObject;
@@ -17,7 +18,8 @@ public class turretController : MonoBehaviour {
     bool shootingbool;
 
     // Use this for initialization
-    void Start () {
+    void OnEnable () {
+        turretHp = maxHp;
         chargeObject = GameObject.Find("Lazer_Charge");
         manager = FindObjectOfType<stageManagement>();
 
@@ -28,7 +30,7 @@ public class turretController : MonoBehaviour {
     void Update () {
         chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
 
-        Debug.DrawRay(transform.position, Vector3.left * 25, Color.green);
+        Debug.DrawRay(transform.position, Vector3.left * 35, Color.green);
 
         checkforhit();
 
@@ -59,7 +61,7 @@ public class turretController : MonoBehaviour {
 
 
 
-        if (Physics.Raycast(transform.position, Vector3.left, 25, playerMask, QueryTriggerInteraction.Collide) && !shootingbool)
+        if (Physics.Raycast(transform.position, Vector3.left, 35, playerMask, QueryTriggerInteraction.Collide) && !shootingbool)
         {
             Debug.Log("FOUND PLAYER");
             StartCoroutine(ceilShoot());

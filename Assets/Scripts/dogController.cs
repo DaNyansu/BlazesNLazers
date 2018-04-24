@@ -28,6 +28,7 @@ public class dogController : MonoBehaviour {
         chargeObject = GameObject.Find("Lazer_Charge");
         enemyAnimator = GetComponent<Animator>();
         manager = FindObjectOfType<stageManagement>();
+        stopmoving = false;
 
 
     }

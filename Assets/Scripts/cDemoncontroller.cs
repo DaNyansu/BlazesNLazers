@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class cDemoncontroller : MonoBehaviour {
 
-    public int cDemonHp;
+    int cDemonHp;
+    public int maxHp;
     int chargeDmg;
 
     stageManagement manager;
@@ -18,7 +19,8 @@ public class cDemoncontroller : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void OnEnable () {
+        cDemonHp = maxHp;
         chargeObject = GameObject.Find("Lazer_Charge");
         manager = FindObjectOfType<stageManagement>();
 
