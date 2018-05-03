@@ -51,4 +51,12 @@ public class EnemyScript : MonoBehaviour {
             gameObject.SetActive(false);
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Beam")
+        {
+            enemyHp -= 2;
+        }
+    }
 }

@@ -9,6 +9,7 @@ public class objectPooler : MonoBehaviour
 
     public GameObject[] pooledArrayObject = new GameObject[5];
 
+    platformGenerator generator;
     public int pooledAmount;
 
     List<GameObject> pooledObjects;
@@ -18,6 +19,8 @@ public class objectPooler : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        generator = FindObjectOfType<platformGenerator>();
+
         pooledObjects = new List<GameObject>();
         waitingObjects = new List<GameObject>();
 

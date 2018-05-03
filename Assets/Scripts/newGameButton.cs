@@ -36,7 +36,7 @@ public class newGameButton : MonoBehaviour {
 
     IEnumerator LoadingLevel()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(10f);
         AsyncOperation async = SceneManager.LoadSceneAsync("Generated level", LoadSceneMode.Single);
 
         while (!async.isDone)

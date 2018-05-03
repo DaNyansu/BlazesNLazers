@@ -9,7 +9,7 @@ public class cDemoncontroller : MonoBehaviour {
     int chargeDmg;
 
     stageManagement manager;
-
+    Animator ceilanimator;
 
     GameObject chargeObject;
 
@@ -20,6 +20,7 @@ public class cDemoncontroller : MonoBehaviour {
 
     // Use this for initialization
     void OnEnable () {
+        ceilanimator = GetComponent<Animator>();
         cDemonHp = maxHp;
         chargeObject = GameObject.Find("Lazer_Charge");
         manager = FindObjectOfType<stageManagement>();
@@ -53,9 +54,18 @@ public class cDemoncontroller : MonoBehaviour {
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Beam")
+        {
+            cDemonHp -= 2;
+        }
+    }
+
     IEnumerator ceilShoot()
     {
         yield return new WaitForSeconds(1f);
+        ceilanimator.SetTrigger("Spit");
         var bullet = (GameObject)Instantiate(ceilProjectile, ceilSpawn.position,ceilSpawn.rotation);
         bullet.GetComponent<Rigidbody>().AddRelativeForce(transform.up * bulletspeed);
         Destroy(bullet, 2.0f);

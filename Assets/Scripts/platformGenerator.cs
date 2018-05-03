@@ -7,6 +7,10 @@ public class platformGenerator : MonoBehaviour {
     public GameObject interiorBlock;
     public Transform generationPoint;
 
+
+    int generatedPlatforms = 0;
+    int difficultyThreshold = 5;
+
     private float platformWidth;
 
     public objectPooler theObjectPool;
@@ -22,6 +26,15 @@ public class platformGenerator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        Debug.Log(generatedPlatforms);
+
+        if(generatedPlatforms >= difficultyThreshold)
+        {
+            randomEnemyThreshold = randomEnemyThreshold - 7;
+            difficultyThreshold +=5;
+            
+        }
 		
         if(transform.position.x < generationPoint.transform.position.x)
         {
@@ -29,6 +42,7 @@ public class platformGenerator : MonoBehaviour {
             transform.position = new Vector3(transform.position.x + platformWidth, transform.position.y, transform.position.z);
 
             GameObject newBlock = theObjectPool.GetPooledObject();
+            updatePlatforms(1);
 
             newBlock.transform.position = transform.position;
             newBlock.SetActive(true);
@@ -40,4 +54,10 @@ public class platformGenerator : MonoBehaviour {
 
         }
 	}
+
+    public void updatePlatforms(int amount)
+    {
+        generatedPlatforms = generatedPlatforms + amount;
+    }
+
 }

@@ -64,12 +64,27 @@ public class dogController : MonoBehaviour {
     void checkforhit()
     {
         LayerMask playerMask = LayerMask.GetMask("Player");
+        LayerMask enemyMask = LayerMask.GetMask("Enemy");
 
-        if (Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 2f,transform.position.z), Vector3.left, 15, playerMask, QueryTriggerInteraction.Collide) && !dogAttack.isPlaying && dogHp > 0)
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Vector3.left, 15, playerMask, QueryTriggerInteraction.Collide) && !dogAttack.isPlaying && dogHp > 0)
         {
             Debug.Log("FOUNDYOU");
             dogAttack.Play();
         }
+
+        else if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Vector3.left, 15, enemyMask, QueryTriggerInteraction.Collide)  && dogHp > 0)
+        {
+            Debug.Log("enemyinfornt");
+            enemyAnimator.SetTrigger("StopMove");
+            stopmoving = true;
+        }
+
+        else
+        {
+            stopmoving = false;
+            enemyAnimator.SetTrigger("StartMove");
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)

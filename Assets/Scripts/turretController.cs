@@ -55,6 +55,14 @@ public class turretController : MonoBehaviour {
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Beam")
+        {
+            turretHp -= 2;
+        }
+    }
+
     void checkforhit()
     {
         LayerMask playerMask = LayerMask.GetMask("Player");

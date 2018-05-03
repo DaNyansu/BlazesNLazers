@@ -11,7 +11,7 @@ public class shieldCollider : MonoBehaviour {
             Debug.Log("Shields are hit");
             Debug.Log(collision.name);
             Rigidbody enemycoll = collision.gameObject.GetComponent<Rigidbody>();
-            enemycoll.AddForce(Vector3.right * 100, ForceMode.VelocityChange);
+            //collision.gameObject.transform.Translate(collision.transform.position.x + 10f, collision.transform.position.y, collision.transform.position.z, Space.World);
         } 
     }
 

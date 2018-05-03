@@ -297,6 +297,8 @@ public class playerMovement : MonoBehaviour
 
             }
 
+    */
+
             //LAZER
             if (Input.GetKeyUp(KeyCode.R))
             {
@@ -305,7 +307,7 @@ public class playerMovement : MonoBehaviour
                 endPos = Lazer;
                 startTime = Time.time;
             }
-            */
+
         }
 
         if (startV != EndV && allowfire)
@@ -328,7 +330,7 @@ public class playerMovement : MonoBehaviour
                 Destroy(bullet, 2.0f);
                 if (heating <= maxHeat - freeheat)
                 {
-                    heating += 2;
+                    heating += 1;
                 }
                 lasersound.Play();
                 updateHeat();

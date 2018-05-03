@@ -82,6 +82,7 @@ public class stageManagement : MonoBehaviour {
         scoreText.text = score.ToString();
     }
 
+
     IEnumerator returnLab()
     {
         yield return new WaitForSeconds(2f);
