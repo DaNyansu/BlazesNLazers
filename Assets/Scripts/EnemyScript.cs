@@ -35,6 +35,7 @@ public class EnemyScript : MonoBehaviour {
 
     void OnCollisionEnter(Collision coll)
     {
+
         if (coll.gameObject.tag == "FreeBullet")
         {
             enemyHp -= 5;
@@ -54,6 +55,7 @@ public class EnemyScript : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
+
         if (other.gameObject.tag == "Beam")
         {
             enemyHp -= 2;

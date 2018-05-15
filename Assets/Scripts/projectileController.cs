@@ -12,7 +12,7 @@ public class projectileController : MonoBehaviour {
      void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.tag != "Ball")
+        if (collision.gameObject.tag != "Ball" || collision.gameObject.tag != "FreeBullet" || collision.gameObject.tag != "ChargeBullet")
         {
             Destroy(gameObject);
         }

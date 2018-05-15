@@ -47,6 +47,11 @@ public class batController : MonoBehaviour {
 
     }
 
+    void checkforhit()
+    {
+            // WE CAN MOVE THE BAT HERE
+    }
+
     void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.tag == "FreeBullet")
