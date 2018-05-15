@@ -51,6 +51,7 @@ public class playerMovement : MonoBehaviour
     Vector3 startRelCenter;
     Vector3 endRelCenter;
 
+    public GameObject[] playerLights = new GameObject[4];
 
     public Transform[] Balls = new Transform[4];
     public Transform[] Wall = new Transform[4];
@@ -211,7 +212,13 @@ public class playerMovement : MonoBehaviour
 
         if (startV == Lazer[1].transform.position)
         {
+            lightsOff();
             LazerBeam();
+        }
+
+        else
+        {
+            lightsOn();
         }
 
         if (startV == Shield[1].position && allowfire)
@@ -317,6 +324,21 @@ public class playerMovement : MonoBehaviour
 
     }
 
+    void lightsOff()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            playerLights[i].SetActive(false);
+        }
+    }
+
+    void lightsOn()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            playerLights[i].SetActive(true);
+        }
+    }
 
     void freeShoot()
     {

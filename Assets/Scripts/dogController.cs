@@ -29,7 +29,7 @@ public class dogController : MonoBehaviour {
         enemyAnimator = GetComponent<Animator>();
         manager = FindObjectOfType<stageManagement>();
         stopmoving = false;
-
+        enemyAnimator.SetTrigger("StopMove");
 
     }
 
@@ -39,11 +39,6 @@ public class dogController : MonoBehaviour {
         Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Vector3.left * 10, Color.green);
         chargeDmg = chargeObject.GetComponent<chargeController>().ballDmg;
         
-        if(!stopmoving)
-        {
-            move();
-            enemyAnimator.SetTrigger("StartMove");
-        }
 
         checkforhit();
       
@@ -71,6 +66,13 @@ public class dogController : MonoBehaviour {
             Debug.Log("FOUNDYOU");
             dogAttack.Play();
         }
+
+        else if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Vector3.left, 30, playerMask, QueryTriggerInteraction.Collide))
+        {
+            move();
+            enemyAnimator.SetTrigger("StartMove");
+        }
+            
 
         else if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Vector3.left, 15, enemyMask, QueryTriggerInteraction.Collide)  && dogHp > 0)
         {
@@ -100,6 +102,17 @@ public class dogController : MonoBehaviour {
         {
             dogHp -= chargeDmg;
         }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("osuu" + other.gameObject.name);
+        if (other.gameObject.name == "Shield")
+        {
+            Debug.Log("PUSKIOI");
+            pushback();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -108,6 +121,12 @@ public class dogController : MonoBehaviour {
         {
             dogHp -= 2;
         }
+    }
+
+    public void pushback()
+    {
+        
+        DogRB.AddForce(Vector3.right * 1000,ForceMode.Impulse);      
     }
 
     IEnumerator waitfordeath()
